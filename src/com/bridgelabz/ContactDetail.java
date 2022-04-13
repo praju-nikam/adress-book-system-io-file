@@ -3,16 +3,15 @@ package com.bridgelabz;
 public class ContactDetail
 {
     //declaring contact details variables
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String city;
-    private String state;
-    private int zip;
-    private String phoneNumber;
-    private String email;
+    String firstName;
+    String lastName;
+    String address;
+    String city;
+    String state;
+    Long zipCode;
+    Long phoneNumber;
+    String emailId;
 
-    // access private fields using getters and setters
 
     public String getFirstName() {
         return firstName;
@@ -54,45 +53,42 @@ public class ContactDetail
         this.state = state;
     }
 
-    public int getZip() {
-        return zip;
+    public Long getZipCode() {
+        return zipCode;
     }
 
-    public void setZip(int zip) {
-        this.zip = zip;
+    public void setZipCode(Long zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public String getPhoneNumber() {
+    public Long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailId() {
+        return emailId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String emailId) {
+        this.emailId =emailId;
     }
-
 
     //Overridden Java toString method
-
     @Override
     public String toString() {
-        return "ContactDetails{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
+        return "Address Book Contact Details = {" +
+                "First Name='" + firstName + '\'' +
+                ", Last Name='" + lastName + '\'' +
+                ", Address='" + address + '\'' +
+                ", City='" + city + '\'' +
+                ", State='" + state + '\'' +
+                ", Zip=" + zipCode +
+                ", Phone Number='" + phoneNumber + '\'' +
+                ", Email='" + emailId + '\'' +
                 '}';
     }
-
 }
