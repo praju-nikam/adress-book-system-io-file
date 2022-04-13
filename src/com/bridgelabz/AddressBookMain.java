@@ -17,5 +17,7 @@ public class AddressBookMain {
 
         AddressBook person = new AddressBook();
         person.add();
+        AddressBook addressBook = new AddressBook();
+        addressBook.getMenu();
     }
 }
