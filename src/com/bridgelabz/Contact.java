@@ -1,34 +1,27 @@
 package com.bridgelabz;
 
-public class Contact extends ContactDetail
+public class Contact
 {
-    //variable declaration
     private String firstName;
     private String lastName;
     private String address;
     private String city;
     private String state;
-    private int zip;
+    private String zip;
     private String phoneNumber;
-    private String emailId;
+    private String email;
 
-    public Contact(String firstName, String lastName, String address, String city, String state, int zipCode, String phoneNumber, String email) {
-        super();
+    Contact(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.city = city;
         this.state = state;
-        this.zip = zipCode;
+        this.zip = zip;
         this.phoneNumber = phoneNumber;
-        this.emailId = email;
+        this.email = email;
     }
 
-    public Contact() {
-
-    }
-
-    //getters and setters
     public String getFirstName() {
         return firstName;
     }
@@ -69,11 +62,11 @@ public class Contact extends ContactDetail
         this.state = state;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 
@@ -85,26 +78,28 @@ public class Contact extends ContactDetail
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
+    public boolean equals(Object object) {
+        boolean result = false;
 
+        if(object == this) {
+            return true;
+        }
+        Contact contact = (Contact)object;
+        if(contact.firstName.equals(this.firstName) && contact.lastName.equals(this.lastName)) {
+            result = true;
+        }
+        return result;
+    }
     @Override
     public String toString() {
-        return "ContactDetails{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", emailId='" + emailId + '\'' +
-                '}';
+        return this.getFirstName() + " " + this.getLastName() + " " + this.getAddress() + " " + this.getPhoneNumber() + " " + this.getEmail();
     }
 }
