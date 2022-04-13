@@ -88,6 +88,16 @@ public class AddressBookMain {
         System.out.println(count1 + " Contacts in " + city);
     }
 
+    // method to sort the entries alphabetically by Person's Name
+    public static void sortByName() {
+        List<Contact> list = new ArrayList<>();
+        for(Map.Entry<String, AddressBook> entries : addressBookHashMap.entrySet()) {
+            list = new ArrayList<>(entries.getValue().getAddressBook());
+        }
+        list.stream().sorted((p1, p2) -> ((String)p1.getFirstName()).compareTo(p2.getFirstName()))
+                .forEach(contact -> System.out.println(contact.getFirstName()+" "+contact.getLastName()));
+    }
+
 
 
     // MAIN METHOD
