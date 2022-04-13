@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class AddressBook
+public class AddressBook extends Contact
 {
     ContactDetail person;
     Scanner scanner = new Scanner(System.in);
@@ -60,4 +60,5 @@ public class AddressBook
             person = null;
         }
     }
+
 }
