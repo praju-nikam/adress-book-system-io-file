@@ -74,9 +74,10 @@ public class ContactDetail
         return email;
     }
 
-    public void setEmail(String s) {
-        this.email =email;
+    public void setEmail(String email) {
+        this.email = email;
     }
+
 
     //Overridden Java toString method
 
@@ -93,4 +94,5 @@ public class ContactDetail
                 ", email='" + email + '\'' +
                 '}';
     }
+
 }
