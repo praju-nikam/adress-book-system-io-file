@@ -75,6 +75,16 @@ public class AddressBookMain {
             System.out.println("Search result: " + contact);
         }
     }
+    // method to view person by city
+    public static void viewContactByCityOrState(String city) {
+        List<Contact> list = new ArrayList<>();
+        for(Map.Entry < String, AddressBook> entries : addressBookHashMap.entrySet()) {
+            list = entries.getValue().getAddressBook().stream().filter(p -> p.getCity().equalsIgnoreCase(city)).collect(Collectors.toList());
+        }
+        for(Contact person : list) {
+            System.out.println(person.getFirstName() + " " + person.getLastName());
+        }
+    }
 
 
     // MAIN METHOD
