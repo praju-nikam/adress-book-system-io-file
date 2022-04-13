@@ -2,35 +2,17 @@ package com.bridgelabz;
 
 public class ContactDetail
 {
-    /**
-     * private variables can only be accessed within the same class (an outside
-     * class has no access to it) private = restricted access However, it is
-     * possible to access them if we provide public get and set methods.
-     */
+    //declaring contact details variables
     private String firstName;
     private String lastName;
     private String address;
     private String city;
     private String state;
-    private int zipCode;
-    private long mobileNumber;
-    private String emailId;
+    private int zip;
+    private String phoneNumber;
+    private String email;
 
-    public ContactDetail() {
-
-    }
-
-    public ContactDetail(String firstName, String lastName, String address, String city, String state, int zipCode,
-                          long mobileNumber, String emailId) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
-        this.mobileNumber = mobileNumber;
-        this.emailId = emailId;
-    }
+    // access private fields using getters and setters
 
     public String getFirstName() {
         return firstName;
@@ -72,37 +54,45 @@ public class ContactDetail
         this.state = state;
     }
 
-
-    public int getZipCode() {
-        return zipCode;
+    public int getZip() {
+        return zip;
     }
 
-    public void setZipCode(int zipCode) {
-        this.zipCode = zipCode;
+    public void setZip(int zip) {
+        this.zip = zip;
     }
 
-    public long getMobileNumber() {
-        return mobileNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setMobileNumber(long mobileNumber) {
-        this.mobileNumber = mobileNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
+    //Overridden Java toString method
 
     @Override
     public String toString() {
-        return "ContactDetails{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", address='"
-                + address + '\'' + ", city='" + city + '\'' + ", state='" + state + '\'' + ", zipCode=" + zipCode
-                + ", mobileNo=" + mobileNumber + ", emailId='" + emailId + '\'' + '}';
-
+        return "ContactDetails{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip=" + zip +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
+
 }
